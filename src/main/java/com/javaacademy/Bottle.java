@@ -1,10 +1,19 @@
 package com.javaacademy;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
 /**
  * Бутылка
  */
+
+@ToString
 public class Bottle {
+    @Getter
     private final double volume;
+    @Setter
     private double nestedVolume;
     private final String cityProducer;
 
@@ -22,21 +31,5 @@ public class Bottle {
             throw  new RuntimeException("Нет места в бутылки, все выливается!");
         }
         setNestedVolume(newNestedVolume);
-    }
-
-    public void setNestedVolume(double nestedVolume) {
-        this.nestedVolume = nestedVolume;
-    }
-
-    public double getVolume() {
-        return volume;
-    }
-
-    @Override
-    public String toString() {
-        return "Bottle{" +
-                "volume=" + volume +
-                ", nestedVolume=" + nestedVolume +
-                '}';
     }
 }

@@ -1,5 +1,6 @@
 package com.javaacademy;
 
+
 public class JournalRecord {
     private double garbageWeight;
     private Bottle bottle;
